@@ -5,19 +5,13 @@ public enum Operator {
 
     // Método para converter um símbolo em um operador
     public static Operator fromSymbol(String symbol) {
-        switch (symbol) {
-            case "+":
-                return PLUS;
-            case "-":
-                return MINUS;
-            case "*":
-                return MULTIPLY;
-            case "/":
-                return DIVIDE;
-            case "^":
-                return POWER;
-            default:
-                throw new IllegalArgumentException("Unknown operator: " + symbol);
-        }
+        return switch (symbol) {
+            case "+" -> PLUS;
+            case "-" -> MINUS;
+            case "*" -> MULTIPLY;
+            case "/" -> DIVIDE;
+            case "^" -> POWER;
+            default -> throw new IllegalArgumentException("Unknown operator: " + symbol);
+        };
     }
 }

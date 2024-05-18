@@ -6,6 +6,7 @@ import com.home.solver.math.Parser;
 import com.home.solver.math.Token;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@RequestMapping("/api/v1/math")
 public class MathExpressionController {
 
     @PostMapping("/evaluate")

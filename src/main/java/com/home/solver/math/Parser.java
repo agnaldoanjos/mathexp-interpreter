@@ -53,7 +53,7 @@ public class Parser {
     private Expression parsePower() {
         Expression base = parsePrimary();
         while (lookahead().type == TokenType.POWER) {
-            Token op = next(); // consume '^'
+            next(); // consume '^'
             Expression exponent = parsePrimary(); // parse the exponent
             base = new BinaryExpression(base, Operator.POWER, exponent);
         }
