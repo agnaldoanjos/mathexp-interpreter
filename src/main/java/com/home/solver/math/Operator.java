@@ -3,7 +3,7 @@ package com.home.solver.math;
 public enum Operator {
     PLUS, MINUS, MULTIPLY, DIVIDE, POWER;
 
-    // Método para converter um símbolo em um operador
+    // Method to convert a symbol into an operator
     public static Operator fromSymbol(String symbol) {
         return switch (symbol) {
             case "+" -> PLUS;
