@@ -11,11 +11,11 @@ O objetivo do projeto é fornecer uma base prática para estudantes e desenvolve
 - Avaliação de expressões matemáticas com suporte para variáveis e operações básicas (+, -, *, /, ^).
 
 ## Instruções de Instalação
-Para executar o MathExp Interpreter, você precisará de Java 11 e Maven configurado em seu ambiente. Siga os passos abaixo para configurar o projeto localmente:
+Para executar o MathExp Interpreter, você precisará de Java 17 e Maven configurado em seu ambiente. Siga os passos abaixo para configurar o projeto localmente:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/mathexp-interpreter.git
+   git clone https://github.com/agnaldoanjos/mathexp-interpreter.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
@@ -47,13 +47,13 @@ Este endpoint aceita uma expressão matemática e um conjunto de variáveis, ava
 #### Exemplos de Uso
 - **Requisição**:
   ```bash
-  curl -X POST http://localhost:8080/evaluate -H "Content-Type: application/json" -d '{"expression": ":x+(:k/:y)", "variables": {"x": 3, "k": 4, "y": 2}}'
+  curl -X POST http://localhost:8080/api/v1/math/evaluate -H "Content-Type: application/json" -d '{"expression": "x+(k/y)", "variables": {"x": 3.0, "k": 4.0, "y": 2.0}}'
   ```
 
 - **Resposta**:
   ```json
   {
-    "result": 5
+    "result": 5.0
   }
   ```
 
